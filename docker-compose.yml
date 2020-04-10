@@ -27,7 +27,7 @@ services:
         ports:
          - "8080:8080"
         links:
-         - postgres
+         - postgres-heros
 
 
     mongo-heros:
