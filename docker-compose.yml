@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+    node-heros:
+        build: .
+        command: yarn
+        command: yarn dev
+        ports: 
+         - "3000:3000"
+        volumes:
+         - '.:/src/app'
+         - '/usr/node_modules'
+
+    mongo-heros:
+        image: mongodb
+
+
+    postgress-heros:
+        image: postgress
