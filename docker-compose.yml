@@ -2,7 +2,7 @@ version: '3'
 
 services:
     node-heros:
-        build: .
+        build: .docker/Dockerfile
         command: yarn
         command: yarn dev
         ports: 
