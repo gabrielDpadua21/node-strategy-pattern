@@ -11,9 +11,32 @@ services:
          - '.:/src/app'
          - '/usr/node_modules'
 
+    postgres-heros:
+        image: postgres
+        porst:
+         - "5432:5432"
+        environment:
+          POSTGRES_USER: root
+          POSTGRES_PASSWORD: toor
+          POSTGRES_DB: db_heros
+        volumes:
+         - .docker/postgress:/data/postgres
+
+    adminer-heros:
+        image: adminer
+        ports:
+         - "8080:8080"
+        link:
+         - postgres
+
+
     mongo-heros:
-        image: mongodb
-
-
-    postgress-heros:
-        image: postgress
+        image: mongo:4
+        ports: 
+          - "27017:27017"
+        volumes: 
+          - .docker/mongodata:/data/db
+        environment: 
+          MONGO_INIT_ROOT_USERNAME: root
+          MONGO_INITDB_ROOT_PASSWORD: toor
+        
