@@ -6,7 +6,7 @@ services:
         command: yarn
         command: yarn dev
         ports: 
-         - "3000:3000"
+         - "3001:3001"
         volumes:
          - '.:/src/app'
          - '/usr/node_modules'
@@ -41,9 +41,9 @@ services:
           MONGO_INITDB_ROOT_PASSWORD: toor
 
     mongocli-heros:
-        images: mongoclient/mongoclient
+        image: mongoclient/mongoclient
         ports:
-         - "3001:3001"
-        link:
+         - "3000:3000"
+        links:
          - mongo-heros
         
