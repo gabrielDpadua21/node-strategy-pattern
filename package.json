@@ -1,0 +1,7 @@
+{
+  "name": "node-strategy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Gabriel D. Padua <gabriel.d.padua21@gmail.com>",
+  "license": "MIT"
+}
