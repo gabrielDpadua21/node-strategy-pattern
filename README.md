@@ -2,3 +2,6 @@
 
 Mult database pattern
 
+- MongoDB - 4.0
+- Postgres
+
