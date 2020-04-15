@@ -22,6 +22,10 @@ class ICrud {
         throw new NotImplementedExepction();
     }
 
+    isConnected() {
+        throw new NotImplementedExepction();
+    }
+
 }
 
 module.exports = ICrud;
