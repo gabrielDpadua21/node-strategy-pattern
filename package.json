@@ -2,9 +2,18 @@
   "name": "node-strategy",
   "version": "1.0.0",
   "scripts": {
+    "test": "mocha src/tests/*.js",
     "dev": ""
   },
   "main": "index.js",
   "author": "Gabriel D. Padua <gabriel.d.padua21@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "pg": "^8.2.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.12"
+  },
+  "devDependencies": {
+    "mocha": "^8.0.1"
+  }
 }
