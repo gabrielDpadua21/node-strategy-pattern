@@ -22,14 +22,14 @@ services:
         volumes:
          - ./.docker/postgres:/data/postgres
 
-    adminer-heros:
-        image: adminer
-        ports:
-         - "8080:8080"
-        links:
-         - postgres-heros
-        depends_on: 
-         - postgres-heros
+    # adminer-heros:
+    #     image: adminer
+    #     ports:
+    #      - "8080:8080"
+    #     links:
+    #      - postgres-heros
+    #     depends_on: 
+    #      - postgres-heros
 
 
     mongo-heros:
